@@ -1,0 +1,155 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    padding: 40px;
+    background: #141414;
+    border: 1px solid #292929;
+    border-radius: 20px;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.5);
+}
+
+.tag {
+    color: #a78bfa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: clamp(30px, 6vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+h1 span {
+    color: #a78bfa;
+}
+
+.subtitle {
+    color: #a3a3a3;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 190px;
+    resize: vertical;
+    padding: 18px;
+    background: #090909;
+    color: #ffffff;
+    border: 1px solid #383838;
+    border-radius: 12px;
+    outline: none;
+    font: inherit;
+    line-height: 1.6;
+    transition: border-color 0.2s;
+}
+
+textarea:focus {
+    border-color: #a78bfa;
+}
+
+textarea::placeholder {
+    color: #737373;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #8b5cf6;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #7c3aed;
+    transform: translateY(-1px);
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+    transform: none;
+}
+
+#result {
+    display: none;
+    margin-top: 24px;
+    padding: 18px;
+    border-radius: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+#result.show {
+    display: block;
+}
+
+#result.fake {
+    background: #351717;
+    border: 1px solid #a33b3b;
+    color: #ffaaaa;
+}
+
+#result.real {
+    background: #153022;
+    border: 1px solid #36865a;
+    color: #9be6b7;
+}
+
+#result.error {
+    background: #332817;
+    border: 1px solid #a17b35;
+    color: #ffdc99;
+}
+
+.note {
+    color: #888888;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 25px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 25px 20px;
+    }
+}

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <p class="tag">AI-POWERED NEWS ANALYZER</p>
+        <h1>Fake News <span>Detection</span></h1>
+        <p class="subtitle">
+            Analyze news text using a Machine Learning model.
+        </p>
+
+        <form id="newsForm">
+            <label for="news">Paste your news article</label>
+            <textarea id="news" placeholder="Enter your news headline or article here..." required></textarea>
+            <button type="submit" id="checkBtn">Check News</button>
+        </form>
+
+        <div id="result" role="status" aria-live="polite"></div>
+        <p class="note">
+            AI predictions can be wrong. Always verify news using trusted sources.
+        </p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
